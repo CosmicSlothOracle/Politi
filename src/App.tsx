@@ -3,27 +3,30 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import InGamePage from './components/InGamePage';
 
-// Create router configuration
-const router = createBrowserRouter([
+// Create router configuration with basename for GitHub Pages
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <LandingPage />
+    },
+    {
+      path: "/play",
+      element: <InGamePage />
+    }
+  ],
   {
-    path: "/",
-    element: <LandingPage />
-  },
-  {
-    path: "/play",
-    element: <InGamePage />
+    basename: '/Politi-Cat', // Add basename for GitHub Pages
+    // Use type assertion for future flags
+    future: {
+      v7_startTransition: true,
+      v7_relativeSplatPath: true
+    } as any
   }
-]);
-
-// Define future flags for RouterProvider
-const futureFlags = {
-  v7_startTransition: true,
-  v7_relativeSplatPath: true
-};
+);
 
 const App = () => {
-  // Apply future flags to opt-in to React Router v7 behavior
-  return <RouterProvider router={router} future={futureFlags as any} />;
+  return <RouterProvider router={router} />;
 };
 
 export default App;

@@ -1,86 +1,75 @@
-# POLITI CAT
+# Politi Cat
 
-The ultimate political card game in retro arcade style.
-
-## About
-
-POLITI CAT is a digital card game featuring political figures from around the world. Each card has six attributes:
-
-- Charisma
-- Leadership
-- Influence
-- Integrity
-- Trickery
-- Wealth
-
-The game works like the classic "Top Trumps" card game where players compare attribute values to win cards.
+A retro-style political card game built with React, TypeScript, and Vite.
 
 ## Features
 
-- Retro arcade-style pixel art design
-- Single-player mode against AI
-- 10 politician cards with unique stats
-- Original soundtrack and sound effects
+- Political card game with turn-based gameplay
+- AI opponents with adaptive strategy
+- Retro-styled UI with animated effects
+- Mobile-responsive design
 
-## Getting Started
+## Tech Stack
 
-### Prerequisites
+- React 18 with TypeScript
+- Vite for fast builds and development
+- React Router for navigation
+- Modern CSS techniques
 
-- Node.js (v14+)
-- npm or yarn
+## Installation
 
-### Installation
+Clone the repository:
 
-1. Clone the repository
-
-```
+```bash
 git clone https://github.com/yourusername/politi-cat.git
 cd politi-cat
 ```
 
-2. Install dependencies
+Install dependencies:
 
-```
+```bash
 npm install
 ```
 
-3. Start the development server
+Start the development server:
 
-```
+```bash
 npm run dev
 ```
 
-4. Open your browser to `http://localhost:5173`
+Visit `http://localhost:5173` to play the game.
 
-## How to Play
+## Build for Production
 
-1. Start the game by clicking "Play Against AI"
-2. Enter your name and click "Start Game"
-3. On your turn, select an attribute from your card
-4. The attribute values of both cards are compared
-5. The player with the higher value wins both cards
-6. In case of a tie, the cards go to a tie pile
-7. The first player to collect all cards wins!
+```bash
+npm run build
+```
 
-## Development
+The built files will be in the `dist` folder.
 
-### Built With
+## Development Tasks
 
-- React
-- TypeScript
-- Vite
-- React Router
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Check TypeScript types
 
-### Project Structure
+## Project Structure
 
-- `/src` - Source code
-  - `/components` - React components
-  - `/game` - Game logic
-  - `/styles` - CSS styles
-- `/public` - Static assets
-  - `/cards` - Card images
-  - `/assets` - UI and audio assets
+```
+politi-cat/
+├── public/           # Static assets
+│   ├── assets/       # Game assets
+│   └── cards/        # Card images
+├── src/              # Source code
+│   ├── components/   # React components
+│   ├── game/         # Game logic
+│   └── styles/       # CSS styles
+├── vite.config.ts    # Vite configuration
+└── package.json      # Package configuration
+```
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT

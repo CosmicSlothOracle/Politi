@@ -9,37 +9,51 @@ politi-cat/
 ├── dist/                  # Build output (generated)
 ├── docs/                  # Documentation
 ├── node_modules/          # Dependencies (generated)
-├── public/                # Static assets
+├── public/
 │   ├── assets/
-│   │   ├── music/         # Audio files
-│   │   └── ui/            # UI assets
-│   ├── cards/             # Card images
-│   └── favicon.ico        # Site favicon
-├── src/                   # Source code
-│   ├── components/        # React components
-│   ├── data/              # JSON data files
-│   ├── game/              # Game logic
-│   ├── hooks/             # Custom React hooks
-│   ├── styles/            # CSS styles
-│   ├── App.tsx            # Main App component
-│   └── main.tsx           # Entry point
-├── .eslintrc.json         # ESLint configuration
-├── .gitignore             # Git ignore file
-├── index.html             # HTML entry point
-├── package-lock.json      # NPM lock file
-├── package.json           # Project dependencies
-├── PROJECT_STRUCTURE.md   # This file
-├── README.md              # Project documentation
-├── tsconfig.json          # TypeScript configuration
-├── tsconfig.node.json     # TypeScript Node configuration
-└── vite.config.ts         # Vite configuration
+│   │   ├── music/         # Background music
+│   │   └── ui/            # Icons, buttons, backgrounds
+│   ├── cards/             # Card images (politicians)
+│   └── favicon.ico        # Website icon
+├── src/
+│   ├── components/
+│   │   ├── CardDisplay.tsx
+│   │   ├── ErrorBoundary.tsx
+│   │   ├── GameBoard.tsx
+│   │   ├── HUD.tsx
+│   │   ├── InGamePage.tsx
+│   │   ├── LandingPage.tsx
+│   │   ├── Loader.tsx
+│   │   └── VictoryScreen.tsx
+│   ├── data/
+│   │   └── cards.json
+│   ├── game/
+│   │   ├── gameEngine.ts
+│   │   ├── types.ts
+│   │   └── useGameState.ts
+│   ├── hooks/
+│   │   └── useSound.ts
+│   ├── styles/
+│   │   └── main.css
+│   ├── App.tsx
+│   └── main.tsx
+├── .eslintrc.json
+├── .gitignore
+├── index.html             # (should move to public/index.html)
+├── package-lock.json
+├── package.json
+├── PROJECT_STRUCTURE.md
+├── README.md
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
 ```
 
 ## Recommended Cleanup Actions
 
-1. Remove the unnecessary `src/public` folder
-2. Remove empty `cardData.ts` file since we're using `cards.json`
-3. Remove the `-p` folder if it's not needed
+1. Move `index.html` to `public/index.html`
+2. Remove the unnecessary `src/public` folder
+3. Remove empty `cardData.ts` file since we're using `cards.json`
 4. Move any assets from the `dist` folder to appropriate locations in `public`
 
 ## Component Organization
